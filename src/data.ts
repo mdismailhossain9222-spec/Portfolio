@@ -44,7 +44,7 @@ export const projects: Project[] = [
       "A storefront that behaves like the hardware: the entire spec — Adaptive ANC II · 40 h · spatial audio — resolved in a single line, a hand-built custom cursor and glow states over Lenis-smooth scrolling, with showroom, specs, story and support on one rail and a one-click $349 checkout.",
     url: "https://github.com/mdismailhossain9222-spec/Arise",
     live: "https://arise-eight-khaki.vercel.app/",
-    preview: { embed: "https://arise-eight-khaki.vercel.app/" },
+    preview: { image: "/images/aeris-one.png" },
     span: "md:col-span-7",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "The one still moving: updated a full day after the rest of the set was finished, and carrying the largest asset payload outside Prism.",
     url: "https://github.com/mdismailhossain9222-spec/Lia",
     live: "https://lia-alpha-seven.vercel.app/",
-    preview: { embed: "https://lia-alpha-seven.vercel.app/" },
+    preview: { image: "/images/lia.png" },
     span: "md:col-span-5",
   },
   {
@@ -72,7 +72,7 @@ export const projects: Project[] = [
       "128,932 bytes — the smallest of the siblings, with the highest JavaScript ratio in the set.",
     url: "https://github.com/mdismailhossain9222-spec/Flowline",
     live: "https://flowline-indol.vercel.app/",
-    preview: { embed: "https://flowline-indol.vercel.app/" },
+    preview: { image: "/images/flowline.png" },
     span: "md:col-span-7",
   },
   {
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       "Created 19:34:14 and pushed at 19:36:59 — a complete typed project in under three minutes of commit time.",
     url: "https://github.com/mdismailhossain9222-spec/Arkhe",
     live: "https://arkhe-chi.vercel.app/",
-    preview: { embed: "https://arkhe-chi.vercel.app/" },
+    preview: { image: "/images/arkhe.png" },
     span: "md:col-span-5",
   },
   {
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       "66 MB — roughly forty times the size of its siblings, and still 91% TypeScript by source weight.",
     url: "https://github.com/mdismailhossain9222-spec/Prism",
     live: "https://prism-blush-two.vercel.app/",
-    preview: { embed: "https://prism-blush-two.vercel.app/" },
+    preview: { image: "/images/prism.png" },
     span: "md:col-span-12",
   },
 ];
