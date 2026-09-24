@@ -15,8 +15,8 @@ export default function ProjectPreview({ project }: { project: Project }) {
   const slug = slugify(project.title);
   const chain = [
     ...(project.preview?.image ? [project.preview.image] : []),
-    `images/${slug}.jpg`,
-    `images/${slug}.png`,
+    `/images/${slug}.jpg`,
+    `/images/${slug}.png`,
   ];
   const embed = project.preview?.embed;
   const video = project.preview?.video;
