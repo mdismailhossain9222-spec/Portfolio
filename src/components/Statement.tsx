@@ -111,17 +111,16 @@ export default function Statement() {
           <div className="mt-12 grid grid-cols-1 gap-8 border-t border-ink/15 pt-6 sm:grid-cols-3">
             {[
               [
-                "Founded 2016",
-                "Van Nelleweg 1, Rotterdam",
+                "Started",
+                "2020",
               ],
               [
                 "Selected clients",
                 "Nieuwe Instituut · PostNL · De Volkskrant · Ahoy · Rijkswaterstaat",
               ],
-              [
-                "Currently",
-                "Drawing a Cyrillic extension for Meridian",
-              ],
+              
+          
+              
             ].map(([head, body]) => (
               <div key={head}>
                 <span
