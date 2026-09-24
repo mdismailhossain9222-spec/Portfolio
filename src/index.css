@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4efe6;
+  --color-stock: #e9e2d5;
+  --color-ink: #14120f;
+  --color-taupe: #6b6459;
+  --color-vermilion: #c6381a;
+  --color-pewter: #57534e;
+
+  --font-display: "Bitter", Georgia, "Times New Roman", serif;
+  --font-sans: "Archivo", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: auto;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-vermilion);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-vermilion);
+    outline-offset: 3px;
+  }
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Printer's grain over the whole sheet */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Didone hairlines vanish at display sizes — hold a weight floor on display
+   type so no stroke drops out of the page. */
+@layer base {
+  .font-display {
+    font-weight: 500;
+  }
+}
+
+/* The name itself: extra-bold, with the optical size pulled back so the
+   hairlines stay thick enough to see. */
+.display-name {
+  font-weight: 800;
+  letter-spacing: 0.005em;
+}
+
+/* Glow around the name. Drawn as a filter on each LINE (not per letter) so
+   neighbouring letters never get washed by each other's glow. Paper-coloured,
+   so on the sheet it disappears and over the photograph it reads as a soft halo
+   that lifts the black type off the picture. Three stacked drop-shadows =
+   a tight core plus a wide, feathered falloff. Swap the colour (e.g.
+   var(--color-vermilion)) for a coloured glow. */
+.name-glow {
+  filter: drop-shadow(0 0 0.001em var(--color-paper))
+    drop-shadow(0 0 0.005em var(--color-paper))
+    drop-shadow(0 0 0.05em var(--color-paper));
+}
+
+/* Explicit, literal weights for display type — declared here so the strokes
+   are guaranteed to hold regardless of utility emission. */
+@layer utilities {
+  .font-medium {
+    font-weight: 500;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .font-extrabold {
+    font-weight: 800;
+  }
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* opening curtain — pure CSS, so it lifts even if no script runs */
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 3rem;
+  background: var(--color-paper);
+  pointer-events: none;
+  animation: curtain-up 0.95s cubic-bezier(0.76, 0, 0.24, 1) 0.35s forwards;
+}
+
+@keyframes curtain-up {
+  to {
+    transform: translateY(-101%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain {
+    display: none;
+  }
+}
+
+@keyframes ticker-run {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ticker-run {
+  animation: ticker-run 42s linear infinite;
+}
+.ticker-run-slow {
+  animation: ticker-run 70s linear infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-run,
+  .ticker-run-slow {
+    animation: none;
+  }
+}
