@@ -36,10 +36,10 @@ export default function Studio() {
     <section
       ref={root}
       data-axis="y"
-      className="mx-auto max-w-[1600px] px-4 py-12 md:px-8 md:py-20 lg:py-28"
+      className="mx-auto max-w-[1600px] px-4 py-12 md:px-8 md:py-20 lg:py-24"
     >
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
-        {/* Left Side: Portrait responsive for all devices */}
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
+        {/* Left Side: Scaled portrait matching editorial typography */}
         <div className="lg:col-span-5 flex flex-col items-center lg:items-start w-full">
           <div className="flex items-center gap-3 mb-4 w-full justify-start">
             <span className="label text-vermilion">06 — STUDIO</span>
@@ -49,14 +49,14 @@ export default function Studio() {
           </div>
           <div
             data-portrait
-            className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-full mx-auto lg:mx-0 overflow-hidden"
+            className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-none lg:w-[115%] lg:-ml-[8%] overflow-hidden"
           >
             <Portrait />
           </div>
         </div>
 
         {/* Right Side: Text & Specs */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 lg:pl-4">
           <p className="font-display text-[clamp(1.5rem,3.2vw,2.75rem)] font-semibold leading-[1.32] tracking-normal">
             I'm Ismail Hossain. I started on the front end, got tired of waiting for the
             API, and learned the rest out of spite. Now I take products from an
