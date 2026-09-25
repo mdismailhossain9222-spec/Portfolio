@@ -1,5 +1,4 @@
 import { Suspense, lazy, useEffect, useRef } from "react";
-import Portrait from "./Portrait";
 import { gsap, prefersReduced } from "../lib/gsap";
 
 /* three.js is the heaviest dependency on the page (~600 KB) — keep it out of
@@ -211,7 +210,7 @@ export default function Hero() {
             {/* HOSSAIN — in front of the photo */}
             <div className="name-glow relative z-[3] overflow-hidden">
               <div ref={l2w}>
-                <div ref={l2} className="origin-right text-right italic">
+                <div ref= {l2} className="origin-right text-right italic">
                   {NAME_B.map((c, i) => (
                     <span key={i} className="char inline-block">
                       {c}
@@ -233,11 +232,6 @@ export default function Hero() {
         </div>
 
         <TickerRow />
-      </div>
-
-      {/* the figure, centred */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-[68vh] justify-center">
-        <Portrait />
       </div>
 
       {/* the block, standing on the paper */}

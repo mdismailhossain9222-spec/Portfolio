@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap, prefersReduced } from "../lib/gsap";
 import { specs } from "../data";
-import kit from "../assets/images/dev-02.jpg";
-
+import Portrait from "./Portrait";
 
 export default function Studio() {
   const root = useRef<HTMLElement>(null);
@@ -39,25 +38,22 @@ export default function Studio() {
       data-axis="y"
       className="mx-auto max-w-[1600px] px-4 py-20 md:px-8 md:py-28"
     >
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
-        <div className="md:col-span-2">
-          <h2 className="label text-vermilion">06 — Studio</h2>
-          <figure data-portrait className="mt-4">
-            <div className="relative aspect-[4/3] overflow-hidden border border-ink/20">
-              <img
-                src={kit}
-                alt="A small three-unit server rack with vermilion patch cables"
-                loading="lazy"
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-            <figcaption className="label mt-3 text-taupe">
-              The kit — three nodes, one UPS, zero drama
-            </figcaption>
-          </figure>
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
+        {/* Left Side: Portrait shifted up and left to match reference */}
+        <div className="lg:col-span-5 lg:-mt-20 lg:-ml-80">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="label text-vermilion">06 — STUDIO</span>
+            <span className="bg-vermilion text-white text-[10px] font-mono px-2 py-0.5 uppercase tracking-wider">
+              Plate III
+            </span>
+          </div>
+          <div data-portrait className="overflow-hidden">
+            <Portrait />
+          </div>
         </div>
 
-        <div className="md:col-span-4">
+        {/* Right Side: Text & Specs */}
+        <div className="lg:col-span-7">
           <p className="font-display text-[clamp(1.5rem,3.2vw,2.75rem)] font-semibold leading-[1.32] tracking-normal">
             I'm Ismail Hossain. I started on the front end, got tired of waiting for the
             API, and learned the rest out of spite. Now I take products from an

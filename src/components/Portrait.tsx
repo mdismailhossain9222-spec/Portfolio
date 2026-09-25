@@ -4,9 +4,9 @@ import { useState } from "react";
    Only YOUR photograph is ever shown here — no generated stand-in.
 
    Tried in order:
-     1. src/assets/images/ismail.* — bundled and inlined at build time
-     2. images/ismail.png          — transparent cutout (matches the mockup)
-     3. images/ismail.jpg          — plain photograph, edges feathered into paper
+      1. src/assets/images/ismail.* — bundled and inlined at build time
+      2. images/ismail.png          — transparent cutout (matches the mockup)
+      3. images/ismail.jpg          — plain photograph, edges feathered into paper
 
    If none of those files exist the figure renders nothing and the name
    stands on its own.
