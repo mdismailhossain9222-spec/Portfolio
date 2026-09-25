@@ -40,7 +40,7 @@ export default function Studio() {
     >
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
         {/* Left Side: Scaled portrait matching editorial typography */}
-        <div className="lg:col-span-5 flex flex-col items-center lg:items-start w-full">
+        <div className="lg:col-span-5 flex flex-col items-center lg:items-start w-full lg:-mt-35" >
           <div className="flex items-center gap-3 mb-4 w-full justify-start">
             <span className="label text-vermilion">06 — STUDIO</span>
             <span className="bg-vermilion text-white text-[10px] font-mono px-2 py-0.5 uppercase tracking-wider">
