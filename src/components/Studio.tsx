@@ -36,18 +36,21 @@ export default function Studio() {
     <section
       ref={root}
       data-axis="y"
-      className="mx-auto max-w-[1600px] px-4 py-20 md:px-8 md:py-28"
+      className="mx-auto max-w-[1600px] px-4 py-12 md:px-8 md:py-20 lg:py-28"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
-        {/* Left Side: Cleaned spacing without breaking margins */}
-        <div className="lg:col-span-5">
-          <div className="flex items-center gap-3 mb-4">
+        {/* Left Side: Portrait responsive for all devices */}
+        <div className="lg:col-span-5 flex flex-col items-center lg:items-start w-full">
+          <div className="flex items-center gap-3 mb-4 w-full justify-start">
             <span className="label text-vermilion">06 — STUDIO</span>
             <span className="bg-vermilion text-white text-[10px] font-mono px-2 py-0.5 uppercase tracking-wider">
               Plate III
             </span>
           </div>
-          <div data-portrait className="overflow-hidden">
+          <div
+            data-portrait
+            className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-full mx-auto lg:mx-0 overflow-hidden"
+          >
             <Portrait />
           </div>
         </div>
