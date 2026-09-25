@@ -1,17 +1,5 @@
 import { useState } from "react";
 
-/* Ismail's cutout figure, standing over the name.
-   Only YOUR photograph is ever shown here — no generated stand-in.
-
-   Tried in order:
-      1. src/assets/images/ismail.* — bundled and inlined at build time
-      2. images/ismail.png          — transparent cutout (matches the mockup)
-      3. images/ismail.jpg          — plain photograph, edges feathered into paper
-
-   If none of those files exist the figure renders nothing and the name
-   stands on its own.
-
-   Colour: black and white, matched to ink on bone. */
 const own = Object.values(
   import.meta.glob("../assets/images/ismail.*", {
     eager: true,
@@ -32,7 +20,6 @@ const FEATHER =
 export default function Portrait() {
   const [i, setI] = useState(0);
 
-  // nothing of ours fills the gap: no source, no figure
   if (i >= CHAIN.length) return null;
 
   const src = CHAIN[i];
@@ -44,7 +31,7 @@ export default function Portrait() {
       alt="Ismail Hossain"
       decoding="async"
       onError={() => setI((n) => n + 1)}
-      className="h-full w-auto max-w-none object-contain object-bottom"
+      className="w-full h-auto block object-cover"
       style={{
         filter: "grayscale(1) contrast(1.06) brightness(1.02)",
         ...(cutout ? {} : { WebkitMaskImage: FEATHER, maskImage: FEATHER }),
