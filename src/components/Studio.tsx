@@ -39,8 +39,8 @@ export default function Studio() {
       className="mx-auto max-w-[1600px] px-4 py-20 md:px-8 md:py-28"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
-        {/* Left Side: Portrait shifted up and left to match reference */}
-        <div className="lg:col-span-5 lg:-mt-20 lg:-ml-80">
+        {/* Left Side: Cleaned spacing without breaking margins */}
+        <div className="lg:col-span-5">
           <div className="flex items-center gap-3 mb-4">
             <span className="label text-vermilion">06 — STUDIO</span>
             <span className="bg-vermilion text-white text-[10px] font-mono px-2 py-0.5 uppercase tracking-wider">
