@@ -63,20 +63,6 @@ export const projects: Project[] = [
   },
   {
     no: "03",
-    title: "Flowline",
-    tagline: "Strict where it counts.",
-    summary:
-      "A production-ready TypeScript web application with the most pragmatic mix of the set: 84% TypeScript, 14% JavaScript — now deployed and live on Vercel.",
-    stack: ["TypeScript", "JavaScript", "CSS", "Vercel"],
-    highlight:
-      "128,932 bytes — the smallest of the siblings, with the highest JavaScript ratio in the set.",
-    url: "https://github.com/mdismailhossain9222-spec/Flowline",
-    live: "https://flowline-indol.vercel.app/",
-    preview: { image: "/images/flowline.png" },
-    span: "md:col-span-7",
-  },
-  {
-    no: "04",
     title: "Arkhe",
     tagline: "Built in one sitting.",
     summary:
@@ -90,7 +76,49 @@ export const projects: Project[] = [
     span: "md:col-span-5",
   },
   {
+    no: "04",
+    title: "Flowline",
+    tagline: "Strict where it counts.",
+    summary:
+      "A production-ready TypeScript web application with the most pragmatic mix of the set: 84% TypeScript, 14% JavaScript — now deployed and live on Vercel.",
+    stack: ["TypeScript", "JavaScript", "CSS", "Vercel"],
+    highlight:
+      "128,932 bytes — the smallest of the siblings, with the highest JavaScript ratio in the set.",
+    url: "https://github.com/mdismailhossain9222-spec/Flowline",
+    live: "https://flowline-indol.vercel.app/",
+    preview: { image: "/images/flowline.png" },
+    span: "md:col-span-7",
+  },
+  {
     no: "05",
+    title: "IZ Cafe",
+    tagline: "Where every cup tells a story",
+    summary:
+      "A specialty coffee shop experience featuring an interactive menu showcase, a dedicated craft page highlighting the brewing process and team story, plus immersive mobile-first navigation with warm, inviting visuals.",
+    stack: ["React", "Tailwind CSS", "Framer Motion"],
+    highlight:
+      "Built a fully responsive craft page with smooth scroll-triggered animations and an interactive team gallery section, optimized for fast mobile load times",
+    url: "https://github.com/mdismailhossain9222-spec/Iz-Cafee-Demo-1",
+    live: "https://iz-cafee-demo-1.vercel.app",
+    preview: { image: "/images/iz-cafe.jpg" },
+    span: "md:col-span-7",
+  },
+  {
+    no: "06",
+    title: "Workout Club",
+    tagline: "Train hard, join the movement",
+    summary:
+      "A fitness community platform built for workout tracking, class scheduling, and member engagement — featuring bold typography, energetic visual design, and a motivating user experience.",
+    stack: ["React", "Tailwind CSS", "Framer Motion"],
+    highlight:
+      "Implemented dynamic class scheduling UI with smooth transitions and a bold, energetic visual system for member engagement",
+    url: "https://github.com/mdismailhossain9222-spec/Workout-club-2",
+    live: "https://workoutclub-2.vercel.app",
+    preview: { image: "/images/workout-club.jpg" },
+    span: "md:col-span-5",
+  },
+  {
+    no: "07",
     title: "Prism",
     tagline: "The heavyweight.",
     summary:
