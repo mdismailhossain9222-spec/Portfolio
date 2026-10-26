@@ -118,18 +118,21 @@ export const projects: Project[] = [
     span: "md:col-span-5",
   },
   {
-    no: "07",
-    title: "Prism",
-    tagline: "The heavyweight.",
+    no: "08",
+    title: "SØNDER Fashion E-Commerce",
+    tagline: "Full-stack fashion platform with WebGL visuals",
     summary:
-      "A production-ready TypeScript web project — by a distance the largest repository in the set at 66 MB — now deployed and live on Vercel.",
-    stack: ["TypeScript", "JavaScript", "CSS", "Vercel"],
+      "A full-stack e-commerce platform for a modern clothing brand, featuring interactive WebGL visuals, dynamic routing, and a sleek checkout flow.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "WebGL", "Framer Motion", "Vercel"],
     highlight:
-      "66 MB — roughly forty times the size of its siblings, and still 91% TypeScript by source weight.",
-    url: "https://github.com/mdismailhossain9222-spec/Prism",
-    live: "https://prism-blush-two.vercel.app/",
-    preview: { image: "/images/prism.png" },
-    span: "md:col-span-12",
+      "Custom WebGL LightBloom shader hero with deep purple/violet gradients; clothing-only editorial photography; USD pricing; full cart/checkout flow; deployed on Vercel.",
+    url: "https://github.com/mdismailhossain9222-spec/Somber",
+    live: "https://sonder-umber.vercel.app",
+    preview: {
+      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000",
+      alt: "SØNDER fashion e-commerce website screenshot",
+    },
+    span: "md:col-span-7",
   },
 ];
 
