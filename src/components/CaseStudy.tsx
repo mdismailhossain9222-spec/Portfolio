@@ -85,115 +85,117 @@ export default function CaseStudy() {
 
   return (
     <>
-      {/* Premium Case Study Section for SØNDER */}
+      {/* Premium Case Study Section for SØNDER - 2-Column Layout (Text Left, Image Right) */}
       <section
         id="sonder-case-study"
         className="relative overflow-hidden border-y border-ink bg-stock/60 pt-32 pb-20 md:pt-40 md:pb-28"
       >
         <div className="mx-auto max-w-[1600px] px-4 md:px-8">
-          {/* Hero Banner - Full Width Image at Top */}
-          <div className="mb-16 md:mb-20">
-            <a
-              href={sonderProject.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group/image relative overflow-hidden rounded-lg"
-              aria-label={`Open ${sonderProject.title} live site in new tab`}
-            >
-              <div className="group relative aspect-[16/9] overflow-hidden rounded-lg bg-ink">
-                <img
-                  src={sonderProject.preview.image}
-                  alt={sonderProject.preview.alt}
-                  loading="eager"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-[1.02]"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
-                <ArrowUpRight
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-vermilion text-paper flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"
-                  strokeWidth={1.6}
-                />
+          <div className="flex flex-col lg:flex-row lg:gap-16 items-start">
+            {/* Left Column: Content (45%) */}
+            <div className="flex-1 lg:order-1 w-full">
+              {/* Meta Tags */}
+              <div className="flex items-center gap-4 mb-8">
+                <span className="label text-vermilion">{sonderProject.no}</span>
+                <span className="h-px w-10 bg-vermilion/40" />
+                <span className="label text-taupe">{sonderProject.category} · {sonderProject.year}</span>
               </div>
-            </a>
-          </div>
 
-          {/* Content Below Image */}
-          <div className="max-w-4xl mx-auto">
-            {/* Meta Tags */}
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <span className="label text-vermilion">{sonderProject.no}</span>
-              <span className="h-px w-10 bg-vermilion/40" />
-              <span className="label text-taupe">{sonderProject.category} · {sonderProject.year}</span>
-            </div>
+              {/* Title */}
+              <h2 className="font-display font-semibold text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] tracking-normal text-ink mb-6">
+                {sonderProject.title}
+              </h2>
 
-            {/* Title */}
-            <h2 className="font-display font-semibold text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] tracking-normal text-ink mb-6 text-center">
-              {sonderProject.title}
-            </h2>
-
-            {/* Tagline */}
-            <p className="font-display italic text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[1.3] text-vermilion/90 max-w-2xl mx-auto text-center mb-12 md:mb-16">
-              {sonderProject.tagline}
-            </p>
-
-            {/* Overview */}
-            <div className="mb-12 md:mb-16">
-              <h3 className="font-display font-semibold text-xl text-ink mb-6 tracking-tight text-center">Overview</h3>
-              <p className="text-[16px] leading-[1.8] text-ink/80 max-w-3xl mx-auto text-center">
-                {sonderProject.summary}
+              {/* Tagline */}
+              <p className="font-display italic text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[1.3] text-vermilion/90 max-w-2xl mb-12 md:mb-16">
+                {sonderProject.tagline}
               </p>
-            </div>
 
-            {/* Key Highlights */}
-            <div className="mb-12 md:mb-16">
-              <h3 className="font-display font-semibold text-xl text-ink mb-8 tracking-tight text-center">Key Highlights</h3>
-              <div className="space-y-4 max-w-3xl mx-auto">
-                {sonderProject.highlight.split("; ").map((h, idx) => (
-                  <div
-                    key={h}
-                    className="flex items-start gap-4 bg-stock/50 px-6 py-5 rounded-xl border border-ink/10 hover:border-vermilion/30 transition-colors duration-300"
-                  >
-                    <div className="flex-shrink-0 mt-1.5">
-                      <span className="block h-2 w-2 bg-vermilion rounded-full" />
+              {/* Overview */}
+              <div className="mb-12 md:mb-16">
+                <h3 className="font-display font-semibold text-xl text-ink mb-6 tracking-tight">Overview</h3>
+                <p className="text-[16px] leading-[1.8] text-ink/80 max-w-xl">
+                  {sonderProject.summary}
+                </p>
+              </div>
+
+              {/* Key Highlights */}
+              <div className="mb-12 md:mb-16">
+                <h3 className="font-display font-semibold text-xl text-ink mb-8 tracking-tight">Key Highlights</h3>
+                <div className="space-y-4 max-w-xl">
+                  {sonderProject.highlight.split("; ").map((h, idx) => (
+                    <div
+                      key={h}
+                      className="flex items-start gap-4 bg-stock/50 px-6 py-5 rounded-xl border border-ink/10 hover:border-vermilion/30 transition-colors duration-300"
+                    >
+                      <div className="flex-shrink-0 mt-1.5">
+                        <span className="block h-2 w-2 bg-vermilion rounded-full" />
+                      </div>
+                      <p className="font-display text-ink text-base leading-relaxed">{h}</p>
                     </div>
-                    <p className="font-display text-ink text-base leading-relaxed">{h}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+
+              {/* Tech Stack */}
+              <div className="mb-12 md:mb-16">
+                <h3 className="font-display font-semibold text-xl text-ink mb-8 tracking-tight">Tech Stack</h3>
+                <div className="flex flex-wrap gap-3">
+                  {sonderProject.stack.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-ink/15 bg-stock/50 px-5 py-2.5 text-[0.8125rem] tracking-[0.04em] text-ink/70 hover:text-ink hover:border-vermilion/40 transition-all duration-300"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Premium CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-ink/10">
+                <a
+                  href={sonderProject.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-vermilion text-paper font-medium rounded-lg hover:bg-vermilion/90 transition-all duration-300 text-base"
+                >
+                  View Live Site
+                  <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
+                </a>
+                <a
+                  href={sonderProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-ink/15 bg-stock/50 text-ink font-medium rounded-lg hover:bg-ink/5 hover:border-ink/30 transition-all duration-300 text-base"
+                >
+                  View Source
+                </a>
               </div>
             </div>
 
-            {/* Tech Stack */}
-            <div className="mb-12 md:mb-16">
-              <h3 className="font-display font-semibold text-xl text-ink mb-8 tracking-tight text-center">Tech Stack</h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {sonderProject.stack.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-full border border-ink/15 bg-stock/50 px-5 py-2.5 text-[0.8125rem] tracking-[0.04em] text-ink/70 hover:text-ink hover:border-vermilion/40 transition-all duration-300"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Premium CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 border-t border-ink/10">
+            {/* Right Column: Hero Image (55%) */}
+            <div className="flex-0-0 flex-[0_0_55%] w-full lg:order-2 pt-8 lg:pt-0">
               <a
                 href={sonderProject.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-vermilion text-paper font-medium rounded-lg hover:bg-vermilion/90 transition-all duration-300 text-base"
+                className="block group/image relative overflow-hidden"
+                aria-label={`Open ${sonderProject.title} live site in new tab`}
               >
-                View Live Site
-                <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
-              </a>
-              <a
-                href={sonderProject.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-ink/15 bg-stock/50 text-ink font-medium rounded-lg hover:bg-ink/5 hover:border-ink/30 transition-all duration-300 text-base"
-              >
-                View Source
+                <div className="group relative aspect-[3/2] overflow-hidden rounded-lg bg-ink">
+                  <img
+                    src={sonderProject.preview.image}
+                    alt={sonderProject.preview.alt}
+                    loading="eager"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-[1.02]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
+                  <ArrowUpRight
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-vermilion text-paper flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"
+                    strokeWidth={1.6}
+                  />
+                </div>
               </a>
             </div>
           </div>
