@@ -132,7 +132,7 @@ export const projects: Project[] = [
       image: "/images/Sonder.png",
       alt: "SØNDER fashion e-commerce website screenshot",
     },
-    span: "md:col-span-7",
+    span: "md:col-span-12",
   },
 ];
 

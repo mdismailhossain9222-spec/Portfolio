@@ -29,7 +29,7 @@ export default function ProjectPreview({ project }: { project: Project }) {
   const href = project.live ?? project.url;
 
   return (
-    <div className="relative aspect-[3/2] w-full shrink-0 overflow-hidden border border-ink/20 bg-stock">
+    <div className="relative aspect-video w-full shrink-0 overflow-hidden border border-ink/20 bg-stock rounded-lg">
       {/* base layer — screenshot or wireframe mockup */}
       {hasShot ? (
         <img
