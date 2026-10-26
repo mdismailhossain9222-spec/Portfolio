@@ -129,7 +129,7 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Somber",
     live: "https://sonder-umber.vercel.app",
     preview: {
-      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000",
+      image: "/images/Sonder.png",
       alt: "SØNDER fashion e-commerce website screenshot",
     },
     span: "md:col-span-7",
