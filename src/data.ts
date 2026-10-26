@@ -117,23 +117,6 @@ export const projects: Project[] = [
     preview: { image: "/images/workout-club.jpg" },
     span: "md:col-span-5",
   },
-  {
-    no: "08",
-    title: "SØNDER Fashion E-Commerce",
-    tagline: "Full-stack fashion platform with WebGL visuals",
-    summary:
-      "A full-stack e-commerce platform for a modern clothing brand, featuring interactive WebGL visuals, dynamic routing, and a sleek checkout flow.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "WebGL", "Framer Motion", "Vercel"],
-    highlight:
-      "Custom WebGL LightBloom shader hero with deep purple/violet gradients; clothing-only editorial photography; USD pricing; full cart/checkout flow; deployed on Vercel.",
-    url: "https://github.com/mdismailhossain9222-spec/Somber",
-    live: "https://sonder-umber.vercel.app",
-    preview: {
-      image: "/images/Sonder.png",
-      alt: "SØNDER fashion e-commerce website screenshot",
-    },
-    span: "md:col-span-7",
-  },
 ];
 
 export const statement: { words: string[] } = {
