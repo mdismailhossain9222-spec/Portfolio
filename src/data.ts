@@ -22,7 +22,6 @@ export type Project = {
   highlight: string;
   url: string;
   live?: string;
-  span: string;
   /** Visual preview — optional, see ProjectPreview. */
   preview?: {
     image?: string; // screenshot or high-res preview URL
@@ -45,7 +44,6 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Arise",
     live: "https://arise-eight-khaki.vercel.app/",
     preview: { image: "/images/aeris-one.png" },
-    span: "md:col-span-7",
   },
   {
     no: "02",
@@ -59,7 +57,6 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Lia",
     live: "https://lia-alpha-seven.vercel.app/",
     preview: { image: "/images/lia.png" },
-    span: "md:col-span-5",
   },
   {
     no: "03",
@@ -73,7 +70,6 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Arkhe",
     live: "https://arkhe-chi.vercel.app/",
     preview: { image: "/images/arkhe.png" },
-    span: "md:col-span-5",
   },
   {
     no: "04",
@@ -87,7 +83,6 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Flowline",
     live: "https://flowline-indol.vercel.app/",
     preview: { image: "/images/flowline.png" },
-    span: "md:col-span-7",
   },
   {
     no: "05",
@@ -101,7 +96,6 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Iz-Cafee-Demo-1",
     live: "https://iz-cafee-demo-1.vercel.app",
     preview: { image: "/images/iz-cafe.jpg" },
-    span: "md:col-span-7",
   },
   {
     no: "06",
@@ -132,7 +126,6 @@ export const projects: Project[] = [
       image: "/images/Sonder.png",
       alt: "SØNDER fashion e-commerce website screenshot",
     },
-    span: "md:col-span-12",
   },
   {
     no: "08",
@@ -149,7 +142,6 @@ export const projects: Project[] = [
       image: "/images/aureq.png",
       alt: "Aureq luxury landing page screenshot",
     },
-    span: "md:col-span-12",
   },
 ];
 

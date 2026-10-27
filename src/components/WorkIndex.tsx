@@ -50,18 +50,15 @@ export default function WorkIndex() {
         </p>
       </div>
 
-      <div className="mt-px grid grid-cols-1 gap-px bg-ink/15 md:grid-cols-12">
+      <div className="mt-px grid grid-cols-1 gap-px bg-ink/15 md:grid-cols-2">
         {projects.map((p) => (
           <article
             key={p.no}
             data-plate
-            className={
-              "group relative flex flex-col justify-between gap-8 bg-paper p-6 transition-colors duration-300 hover:bg-stock/70 md:p-9 " +
-              p.span
-            }
+            className="group relative flex flex-col bg-paper transition-colors duration-300 hover:bg-stock/70"
           >
             <ProjectPreview project={p} />
-            <div>
+            <div className="flex flex-1 flex-col gap-4 p-6 md:p-9">
               <div className="flex items-baseline justify-between gap-4">
                 <span className="label tnum text-taupe transition-colors duration-300 group-hover:text-vermilion">
                   {p.no}
@@ -71,18 +68,18 @@ export default function WorkIndex() {
                 </span>
               </div>
 
-              <h3 className="mt-5 font-display text-[clamp(2rem,4.2vw,3.6rem)] font-semibold leading-[1.02] tracking-normal">
+              <h3 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold leading-[1.05] tracking-normal">
                 {p.title}
               </h3>
-              <p className="mt-2 font-display text-[clamp(1.15rem,1.9vw,1.6rem)] italic leading-[1.25] text-vermilion">
+              <p className="font-display text-[clamp(1.05rem,1.5vw,1.3rem)] italic leading-[1.25] text-vermilion">
                 {p.tagline}
               </p>
 
-              <p className="mt-5 max-w-[54ch] text-[15px] leading-[1.6] text-ink/80">
+              <p className="max-w-[54ch] text-[14px] leading-[1.6] text-ink/80">
                 {p.summary}
               </p>
 
-              <ul className="mt-6 flex flex-wrap gap-2">
+              <ul className="flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <li
                     key={s}
@@ -94,13 +91,11 @@ export default function WorkIndex() {
               </ul>
             </div>
 
-            <div>
-              <div className="border-t border-ink/25 pt-4">
-                <p className="label text-vermilion">Engineering note</p>
-                <p className="mt-2 max-w-[62ch] text-[15px] leading-[1.6] text-ink">
-                  {p.highlight}
-                </p>
-              </div>
+            <div className="mt-auto border-t border-ink/25 p-6 md:p-9">
+              <p className="label text-vermilion">Engineering note</p>
+              <p className="mt-2 max-w-[62ch] text-[14px] leading-[1.6] text-ink">
+                {p.highlight}
+              </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
                 <a
