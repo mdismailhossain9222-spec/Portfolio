@@ -142,6 +142,22 @@ export const projects: Project[] = [
       alt: "Aureq luxury landing page screenshot",
     },
   },
+  {
+    no: "09",
+    title: "Noctave",
+    tagline: "Immersive Luxury Digital Experience",
+    summary:
+      "A high-end, immersive digital experience for a luxury brand — cinematic scroll-driven storytelling, bespoke animations, and a sensory journey through scent, sound, and motion. Built with React 19, Vite, TypeScript, and Tailwind v4.",
+    stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
+    highlight:
+      "An immersive, scroll-driven luxury experience with custom GSAP/Framer Motion animations, luxury typography, and sensory design — optimised for both desktop and mobile with a cinematic narrative flow.",
+    url: "https://github.com/mdismailhossain9222-spec/Noctave",
+    live: "https://noctave-bay.vercel.app",
+    preview: {
+      image: "/images/Noctave.png",
+      alt: "Noctave luxury immersive experience screenshot",
+    },
+  },
 ];
 
 export const statement: { words: string[] } = {
