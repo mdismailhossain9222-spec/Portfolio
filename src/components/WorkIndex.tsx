@@ -50,7 +50,7 @@ export default function WorkIndex() {
         </p>
       </div>
 
-      <div className="mt-px grid grid-cols-1 gap-px bg-ink/15 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {projects.map((p) => (
           <article
             key={p.no}

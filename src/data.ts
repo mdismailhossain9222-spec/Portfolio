@@ -109,7 +109,6 @@ export const projects: Project[] = [
     url: "https://github.com/mdismailhossain9222-spec/Workout-club-2",
     live: "https://workoutclub-2.vercel.app",
     preview: { image: "/images/workout-club.jpg" },
-    span: "md:col-span-5",
   },
   {
     no: "07",
@@ -137,7 +136,7 @@ export const projects: Project[] = [
     highlight:
       "A cinematic, quiet-luxury landing page with an HLS video backdrop hero, liquid-glass navigation, a magnetic button, scroll-driven reveals and a custom cursor — all motion respects prefers-reduced-motion and degrades gracefully to a static poster when the stream fails.",
     url: "https://github.com/mdismailhossain9222-spec/Aureq",
-    live: "#",
+    live: "https://aureq-flame.vercel.app",
     preview: {
       image: "/images/aureq.png",
       alt: "Aureq luxury landing page screenshot",
