@@ -134,6 +134,23 @@ export const projects: Project[] = [
     },
     span: "md:col-span-12",
   },
+  {
+    no: "08",
+    title: "Aureq",
+    tagline: "Wear the quiet.",
+    summary:
+      "A high-end, minimalist luxury landing page focusing on premium aesthetics, seamless animations, and modern web design — sculptural accessories in titanium, sapphire, and champagne gold, made slow and worn forever. A React 19 build on Vite and Tailwind v4, smooth-scrolled on Lenis with an HLS video hero.",
+    stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "hls.js"],
+    highlight:
+      "A cinematic, quiet-luxury landing page with an HLS video backdrop hero, liquid-glass navigation, a magnetic button, scroll-driven reveals and a custom cursor — all motion respects prefers-reduced-motion and degrades gracefully to a static poster when the stream fails.",
+    url: "https://github.com/mdismailhossain9222-spec/Aureq",
+    live: "#",
+    preview: {
+      image: "/images/aureq.png",
+      alt: "Aureq luxury landing page screenshot",
+    },
+    span: "md:col-span-12",
+  },
 ];
 
 export const statement: { words: string[] } = {
